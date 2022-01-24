@@ -10,12 +10,13 @@ from numberofgames import howmanygames
 
 
 
+print("Hello.")
 # functions start here
 a = saysomething
 def onegame(): 
   speech = saysomething()
   if speech == "roll":
-    list_choices = ["Rock", "Rock", "Rock", "Paper", "Scissors"]
+    list_choices = ["Rock", "Rock", "Rock", "Paper", "Scissors"]   
   elif speech == "crush":
     list_choices = ["Rock", "Paper", "Paper", "Scissors"]
   else:
