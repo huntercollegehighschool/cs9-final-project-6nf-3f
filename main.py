@@ -22,7 +22,9 @@ def onegame():
     list_choices = ["Rock", "Paper", "Scissors"]
   ComputerC = (random.choice(list_choices))
   PlayerC = playerchoice()
-  if ComputerC == "Rock":
+  if PlayerC == "Restart":
+    onegame()
+  elif ComputerC == "Rock":
     if PlayerC == "Rock":
       print("Tie")
       return "Tie"
@@ -59,8 +61,9 @@ def bestthreeoffive():
   while Pscore < 3 and Cscore < 3:
     result = onegame()
     if result == "Tie":
-      pass
-    if result == "Win":
+      print("Player Score:", Pscore)
+      print("Computer Score:", Cscore)
+    if result == "Win": #Not sure if these have to / should be elifs
       Pscore = Pscore + 1
       print("Player Score:", Pscore)
       print("Computer Score:", Cscore)
